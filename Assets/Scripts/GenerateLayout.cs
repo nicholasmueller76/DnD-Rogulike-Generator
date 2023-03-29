@@ -55,12 +55,16 @@ public class GenerateLayout : MonoBehaviour
 
         if (eliteRooms.Count < 3)
         {
-            for(int i = 0; i < (3-eliteRooms.Count); i++)
-            notEliteRooms[Random.Range(0, notEliteRooms.Count)].GetComponent<SpriteRenderer>().sprite = sprites[(int)RoomTypes.elite];
+            for (int i = 0; i < (3 - eliteRooms.Count); i++)
+            {
+                GameObject eliteRoom = notEliteRooms[Random.Range(0, notEliteRooms.Count)];
+                eliteRooms.Add(eliteRoom);
+                eliteRoom.GetComponent<SpriteRenderer>().sprite = sprites[(int)RoomTypes.elite];
+            }
         }
 
         notEliteRooms[Random.Range(notEliteRooms.Count / 2, notEliteRooms.Count)].GetComponent<SpriteRenderer>().sprite = sprites[(int)RoomTypes.healing];
 
-        if (isShadeFloor) rooms[Random.Range(0, eliteRooms.Count)].GetComponent<SpriteRenderer>().sprite = sprites[(int)RoomTypes.shade];
+        if (isShadeFloor) eliteRooms[Random.Range(0, eliteRooms.Count)].GetComponent<SpriteRenderer>().sprite = sprites[(int)RoomTypes.shade];
     }
 }
