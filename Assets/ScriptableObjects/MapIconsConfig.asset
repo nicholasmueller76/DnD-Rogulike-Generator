@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6132395c8c4dc254bb9bd3cd5ea4ecd2, type: 3}
+  m_Name: MapIconsConfig
+  m_EditorClassIdentifier: 
+  icons:
+  - nodeType: 0
+    sprite: {fileID: 21300000, guid: 59409a67e5728cf4aa0170d16344f1a8, type: 3}
+  - nodeType: 1
+    sprite: {fileID: 21300000, guid: b36a7b7737c9bd142b7b721fdb9af083, type: 3}
+  - nodeType: 2
+    sprite: {fileID: 21300000, guid: 59c065666147f5646bff623e66928636, type: 3}
+  - nodeType: 3
+    sprite: {fileID: 21300000, guid: 9215354adc799994d924cfe5afa0d5fd, type: 3}
+  - nodeType: 4
+    sprite: {fileID: 21300000, guid: 1623fe701fac56d41b59c633e9943f5a, type: 3}
+  - nodeType: 5
+    sprite: {fileID: 21300000, guid: 44a68fb259afc074990f1dcd56448aac, type: 3}
+  - nodeType: 6
+    sprite: {fileID: 21300000, guid: e1573e9518edd594383bd49db237aaea, type: 3}
+  - nodeType: 7
+    sprite: {fileID: 21300000, guid: 3993b670fecde404fb7f64b3c4ff95ac, type: 3}
+  - nodeType: 8
+    sprite: {fileID: 21300000, guid: 29a0a4b6549f38841b518f0cf391b365, type: 3}
+  - nodeType: 9
+    sprite: {fileID: 21300000, guid: b773cd790b37083448a6f1c2e62185bb, type: 3}
+  - nodeType: 10
+    sprite: {fileID: 21300000, guid: b1460f7c0d892be4ea182327ac22329c, type: 3}
+  - nodeType: 11
+    sprite: {fileID: 21300000, guid: 411e84dd23c36f543a99828a7c44d34a, type: 3}

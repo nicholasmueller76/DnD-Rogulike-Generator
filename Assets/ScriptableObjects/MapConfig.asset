@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb433a02585d76147909017f14da96d5, type: 3}
+  m_Name: MapConfig
+  m_EditorClassIdentifier: 
+  nodeTypes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b000000
+  randomNodes: 010000000100000001000000020000000300000003000000030000000400000005000000060000000700000008000000090000000b000000
+  numOfPreBossNodes:
+    min: 5
+    max: 6
+  numOfStartingNodes:
+    min: 2
+    max: 3
+  extraPaths: 0
+  layers:
+  - nodeType: 0
+    distanceFromPreviousLayer:
+      min: 0
+      max: 0
+    nodesApartDistance: 2
+    randomizePosition: 0
+    randomizeNodes: 0
+  - nodeType: 1
+    distanceFromPreviousLayer:
+      min: 3
+      max: 3
+    nodesApartDistance: 2
+    randomizePosition: 0.25
+    randomizeNodes: 0.5
+  - nodeType: 3
+    distanceFromPreviousLayer:
+      min: 3
+      max: 3
+    nodesApartDistance: 2
+    randomizePosition: 1
+    randomizeNodes: 0.75
+  - nodeType: 4
+    distanceFromPreviousLayer:
+      min: 3
+      max: 3
+    nodesApartDistance: 2
+    randomizePosition: 0.5
+    randomizeNodes: 0.5
+  - nodeType: 2
+    distanceFromPreviousLayer:
+      min: 3
+      max: 3
+    nodesApartDistance: 2
+    randomizePosition: 1
+    randomizeNodes: 0.6
+  - nodeType: 5
+    distanceFromPreviousLayer:
+      min: 3
+      max: 3
+    nodesApartDistance: 2
+    randomizePosition: 0.25
+    randomizeNodes: 0.8
+  - nodeType: 10
+    distanceFromPreviousLayer:
+      min: 5
+      max: 5
+    nodesApartDistance: 2
+    randomizePosition: 0
+    randomizeNodes: 0
