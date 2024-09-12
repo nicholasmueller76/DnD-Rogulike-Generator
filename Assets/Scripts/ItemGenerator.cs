@@ -68,25 +68,33 @@ public class ItemGenerator : MonoBehaviour
 
     public void Generate()
     {
-        if (typeSelector.value == 0) GenerateMagicItem();
-        else if (typeSelector.value == 1) GenerateMundaneItem();
+        if (typeSelector.value == 0) output.text = GenerateMagicItem();
+        else if (typeSelector.value == 1) output.text = GenerateMundaneItem();
     }
 
-    public void GenerateMagicItem()
+    public void Generate3()
     {
-        if (raritySelector.value == 0) output.text = Generate(commonItems);
-        else if (raritySelector.value == 1) output.text = Generate(uncommonItems);
-        else if (raritySelector.value == 2) output.text = Generate(rareItems);
-        else if (raritySelector.value == 3) output.text = Generate(veryRareItems);
-        else if (raritySelector.value == 4) output.text = Generate(legendaryItems);
+        if (typeSelector.value == 0) output.text = GenerateMagicItem() + "\n" + GenerateMagicItem() + "\n" + GenerateMagicItem();
+        else if (typeSelector.value == 1) output.text = GenerateMundaneItem() + "\n" + GenerateMundaneItem() + "\n" + GenerateMundaneItem();
     }
 
-    public void GenerateMundaneItem()
+    public string GenerateMagicItem()
     {
-        if (costSelector.value == 0) output.text = Generate(cheapItems);
-        else if (costSelector.value == 1) output.text = Generate(decentItems);
-        else if (costSelector.value == 2) output.text = Generate(goodItems);
-        else if (costSelector.value == 3) output.text = Generate(expensiveItems);
+        if (raritySelector.value == 0) return Generate(commonItems);
+        else if (raritySelector.value == 1) return Generate(uncommonItems);
+        else if (raritySelector.value == 2) return Generate(rareItems);
+        else if (raritySelector.value == 3) return Generate(veryRareItems);
+        else if (raritySelector.value == 4) return Generate(legendaryItems);
+        else return "Invalid generation settings";
+    }
+
+    public string GenerateMundaneItem()
+    {
+        if (costSelector.value == 0) return Generate(cheapItems);
+        else if (costSelector.value == 1) return Generate(decentItems);
+        else if (costSelector.value == 2) return Generate(goodItems);
+        else if (costSelector.value == 3) return Generate(expensiveItems);
+        else return "Invalid generation settings";
     }
 
     public string Generate(string[] items)

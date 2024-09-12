@@ -56,6 +56,8 @@ public class MapGenerator : MonoBehaviour
         // select all the nodes with connections:
         List<Node> nodesList = nodes.SelectMany(n => n).Where(n => n.incoming.Count > 0 || n.outgoing.Count > 0).ToList();
 
+        LimitSuperElites(nodesList);
+
         ClearMap();
 
         mapParent = Instantiate(mapParentPrefab);
@@ -78,6 +80,22 @@ public class MapGenerator : MonoBehaviour
             foreach(Node connection in n.outgoing)
             {
                 AddLineConnection(mapNodes[n], mapNodes[connection]);
+            }
+        }
+    }
+
+    private void LimitSuperElites(List<Node> nodes)
+    {
+        bool containsSuperElite = false;
+        foreach(Node n in nodes)
+        {
+            if(!containsSuperElite)
+            {
+                if (n.nodeType == NodeType.superEliteCombat) containsSuperElite = true;
+            }
+            else
+            {
+                if (n.nodeType == NodeType.superEliteCombat) n.nodeType = NodeType.eliteCombat;
             }
         }
     }
@@ -213,7 +231,7 @@ public class MapGenerator : MonoBehaviour
                 if (!node.outgoing.Any(element => element.Equals(topRight))) continue;
                 if (!right.outgoing.Any(element => element.Equals(top))) continue;
 
-                Debug.Log("Found a cross node: " + node.point);
+                //Debug.Log("Found a cross node: " + node.point);
 
                 // we managed to find a cross node:
                 // 1) add direct connections:

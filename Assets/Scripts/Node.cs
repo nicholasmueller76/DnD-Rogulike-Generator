@@ -7,8 +7,7 @@ public class Node
     public Vector2Int point;
     public List<Node> incoming = new List<Node>();
     public readonly List<Node> outgoing = new List<Node>();
-    public readonly NodeType nodeType;
-    public readonly string blueprintName;
+    public NodeType nodeType;
     public Vector2 position;
 
     public Node(NodeType nodeType, Vector2Int point)
